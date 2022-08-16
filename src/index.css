@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2475e0;
+  --secondary: rgba(36, 117, 224, 0.8);
+  --tertiary: rgba(36, 117, 224, 0.7);
+  --danger: #e41e3f;
+
+  /* LIGHT COLORS */
+  --bg: #f0f2f5;
+  --box: #ffffff;
+  --comment-box: #f0f2f5;
+  --floating-btn: #ffffff;
+  --color: #050505;
+
+  /* DARK COLORS */
+  --bg-dark: #18191a;
+  --box-dark: #242526;
+  --comment-box-dark: #3a3b3c;
+  --floating-btn-dark: #4b4c4f;
+  --color-dark: #e6e5eb;
+}
+
+.active {
+  color: var(--primary);
+  position: relative;
+}
+.active:hover {
+  background: var(--secondary) !important;
+}
+.active > div:hover {
+  background: var(--secondary) !important;
+}
+.active:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--primary);
+}
+
+.active.user-avatar {
+  background: var(--secondary);
+}
+.active.active.user-avatar:before {
+  content: "";
+  height: 0;
+}
+.comment-icons {
+  box-sizing: content-box;
+}
+
+.form-bg {
+  background-color: #2475e0;
+  background: linear-gradient(
+    to top right,
+    rgba(197, 8, 125, 0.3),
+    rgba(154, 13, 197, 0.25)
+  ),
+  /* background: linear-gradient(
+      to top right,
+      rgba(56, 56, 56, 0.3),
+      rgba(58, 58, 58, 0.25)
+    ), */
+    url(../public//assets/logo.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  
+} 
