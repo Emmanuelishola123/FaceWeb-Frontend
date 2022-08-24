@@ -8,7 +8,7 @@ function CurrentChats() {
       <CurrentUserHeader />
       <ul className="flex flex-col gap-2 px-2">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-            <li key={item} className="flex items-center gap-4 px-2 py-1 rounded-lg cursor-pointer hover:bg-comment-box text-lg">
+            <li key={item} className="flex items-center gap-4 px-2 py-1 rounded-lg cursor-pointer hover:bg-comment_box text-lg">
               <ChatHandle message={true}  />
             </li>
           ))}

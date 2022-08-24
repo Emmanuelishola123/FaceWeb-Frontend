@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaPhotoVideo, FaSmile, FaUserFriends, FaVideo } from "react-icons/fa";
 import UserAvater from "../components/UserAvater";
 // import avatar from "../assets/logo.png";
@@ -6,8 +6,13 @@ import { NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import ChatHandle from "../components/ChatHandle";
 import StoryContainer from "../components/StoryContainer";
+import Context from "../context/context.";
 
 function HomePage() {
+  const { state } = useContext(Context);
+  const { sidebarOpen } = state;
+
+
   const user = {
     displayName: "Emmanuel Ishola",
     userId: "Emmanuel-Ishola",
@@ -17,7 +22,7 @@ function HomePage() {
   return (
     <main className="relative grid grid-cols-1 lg:grid-cols-12 py-4">
       {/* LEFT BAR */}
-      <div className="sticky top-0 hidden xl:block xl:col-span-3 px-4 md:px-6">
+      <div className={`sidebar sticky top-0 xl:block xl:col-span-3 px-4 md:px-6 ${sidebarOpen && 'open'}`}>
         <div className="divide-y gap-2">
           <UserAvater {...user} />
           <ul className="flex flex-col gap-2 mt-4 pt-4">

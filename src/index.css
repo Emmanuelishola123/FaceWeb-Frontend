@@ -23,6 +23,22 @@
   --color-dark: #e6e5eb;
 }
 
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+href {
+  scroll-behavior: smooth;
+}
+main {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 .active {
   color: var(--primary);
   position: relative;
@@ -58,24 +74,55 @@
 .form-bg {
   background-color: #2475e0;
   background: linear-gradient(
-    to top right,
-    rgba(197, 8, 125, 0.3),
-    rgba(154, 13, 197, 0.25)
-  ),
-  /* background: linear-gradient(
       to top right,
-      rgba(56, 56, 56, 0.3),
-      rgba(58, 58, 58, 0.25)
-    ), */
+      rgba(197, 8, 125, 0.3),
+      rgba(154, 13, 197, 0.25)
+    ),
     url(../public//assets/logo.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-
-
+/* NAVBAR */
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  background-color: var(--comment-box);
+}
+.search-bar input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.search-bar input:active {
+  border: none;
+}
 
 /* MEDIA QUERY */
-@media screen and (max-width: 768px) {
-  
-} 
+
+/*  */
+@media (min-width: 768px) {
+  .nav-container {
+    display: flex;
+  }
+}
+
+@media (max-width: 1280px) {
+  /* SIDEBAR */
+  .sidebar {
+    width: 275px;
+    height: 100%;
+    padding-top: 70px;
+    background-color:#f9f9f9;
+    position: fixed;
+    left: -110%;
+    top: 0;
+    transition: left 0.5s;
+    z-index: 1400;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+}

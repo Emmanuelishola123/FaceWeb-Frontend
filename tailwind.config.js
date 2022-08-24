@@ -3,24 +3,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
+        primary: "var(_-primary)",
         secondary: "var(--secondary)",
         tertiary: "var(--tertiary)",
         danger: "var(--danger)",
 
         /* LIGHT COLORS */
-        bg: "#f0f2f5",
+        bg: "#f9f9f9",
         box: "#ffffff",
-        "comment-box": "#f0f2f5",
-        "floating-btn": "#ffffff",
+        comment_box : "#f0f2f5",
+        floating_btn: "#ffffff",
         color: "#050505",
 
         /* DARK COLORS */
-        "bg-dark": "#18191a",
-        "box-dark": "#242526",
-        "comment-box-dark": "#3a3b3c",
-        "floating-btn-dark": "#4b4c4f",
-        "color-dark": "#e6e5eb",
+        bg_dark: "#18191a",
+        box_dark: "#242526",
+        comment_box_dark: "#3a3b3c",
+        floating_btn_dark: "#4b4c4f",
+        color_dark: "#e6e5eb",
       },
     },
   },

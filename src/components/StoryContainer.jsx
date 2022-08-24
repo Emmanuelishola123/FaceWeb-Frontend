@@ -35,7 +35,7 @@ function StoryContainer() {
               max: 640,
               min: 0,
             },
-            items: 2,
+            items: 3,
             partialVisibilityGutter: 10,
           },
           tablet: {
@@ -43,7 +43,7 @@ function StoryContainer() {
               max: 1024,
               min: 640,
             },
-            items: 3,
+            items: 4,
             partialVisibilityGutter: 10,
           },
         }}
