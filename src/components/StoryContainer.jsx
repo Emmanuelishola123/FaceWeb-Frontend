@@ -1,62 +1,27 @@
 import React from "react";
 import Story from "./Story";
-import Carousel from "react-multi-carousel";
+// import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function StoryContainer() {
+  const handleStoriesScroll = (direction) => {
+
+  }
   return (
-    <div>
-      <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlay={false}
-        className=""
-        containerClass="container-with-dots"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        itemClass=""
-        keyBoardControl
-        partialVisbile
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={true}
-        renderDotsOutside={false}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 4,
-            partialVisibilityGutter: 10,
-          },
-          mobile: {
-            breakpoint: {
-              max: 640,
-              min: 0,
-            },
-            items: 3,
-            partialVisibilityGutter: 10,
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 640,
-            },
-            items: 4,
-            partialVisibilityGutter: 10,
-          },
-        }}
-        showDots={false}
-        sliderClass=""
-        slidesToSlide={2}
-        swipeable
-      >
+    <div className="relative">
+      <div onClick={handleStoriesScroll('left')} className="absolute inset-y-1/2 -translate-y-1/2 left-0 ml-4 grid place-content-center w-9 h-9 bg-box rounded-full cursor-pointer z-40">
+        <FaChevronLeft className="text-lg" />
+      </div>
+      <div id="story" className="story w-auto flex flex-nowrap items-center  overflow-auto p-2 ">
         <Story userStory={true} />
-        {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
+        {[1, 2, 3, 4, 5, 6, 7, 9].map(() => (
           <Story />
         ))}
-      </Carousel>
+      </div>
+      <div onClick={handleStoriesScroll('right')} className="absolute inset-y-1/2 -translate-y-1/2 right-0 mr-4 grid place-content-center w-9 h-9 bg-box rounded-full cursor-pointer z-40">
+        <FaChevronRight className="text-lg" />
+      </div>
     </div>
   );
 }

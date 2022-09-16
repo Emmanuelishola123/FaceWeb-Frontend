@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Story({ userStory }) {
   return (
     <Link to="/stories/storyId">
-      <div className="w-[110px] h-[180px] text-color-dark relative rounded-xl overflow-hidden">
+      <div className="w-[110px] h-[180px] mx-1 text-color-dark relative rounded-xl overflow-hidden">
         <img src='/assets/logo.png' alt="story" className="w-full h-full -z-40" />
         <div className="w-8 h-8 absolute top-4 left-4 rounded-full overflow-hidden p-[2px] bg-primary">
           <img

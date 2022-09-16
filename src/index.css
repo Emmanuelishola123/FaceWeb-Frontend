@@ -30,13 +30,16 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-href {
+html {
   scroll-behavior: smooth;
 }
 main {
   max-width: 1800px;
   margin: 0 auto;
+}
+
+.story::-webkit-scrollbar {
+  display: none;
 }
 
 .active {

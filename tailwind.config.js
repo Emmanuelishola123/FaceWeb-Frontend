@@ -11,7 +11,7 @@ module.exports = {
         /* LIGHT COLORS */
         bg: "#f9f9f9",
         box: "#ffffff",
-        comment_box : "#f0f2f5",
+        comment_box: "#f0f2f5",
         floating_btn: "#ffffff",
         color: "#050505",
 
