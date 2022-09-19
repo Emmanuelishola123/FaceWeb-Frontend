@@ -59,7 +59,7 @@ function HomePage() {
       {/* MAIN POST FEED */}
       <div className="col-span-1 md:col-span-8 xl:col-span-6 px-4 md:px-6">
         {/* STORIES */}
-        <div className="relative w-full px-2 mb-4 bg-box rounded-lg">
+        <div className="relative w-full p-3 mb-4 bg-box rounded-lg">
           <StoryContainer />
         </div>
         {/* ADD A POST */}
